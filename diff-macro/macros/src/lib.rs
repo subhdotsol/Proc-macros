@@ -22,12 +22,12 @@ pub fn diff(input: TokenStream) -> TokenStream {
                         .map(|field| {
                             // need to get this
                             let field_name = &field.ident;
-                            let field_type = &field.ty;
+                            let _field_type = &field.ty;
 
                             quote! {
                                 if self.#field_name != other.#field_name {
                                     changes.push(format!(
-                                            "{} changed from {:?} → {:?}",
+                                            "{} changed from {} → {}",
                                             stringify!(#field_name),
                                             self.#field_name,
                                             other.#field_name

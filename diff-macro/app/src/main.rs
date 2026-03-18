@@ -9,12 +9,12 @@ struct Person {
 
 fn main() {
     let a = Person {
-        name: String::from("Lord subh"),
-        age: 21,
-    };
-    let b = Person {
         name: String::from("beautiful bri"),
         age: 28,
+    };
+    let b = Person {
+        name: String::from("Lord subh"),
+        age: 21,
     };
 
     println!("{:?}", a);
