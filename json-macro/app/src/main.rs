@@ -1,7 +1,8 @@
 // for adding macros do cargo add macros
 use macros::ToJson;
+use traits::JsonSerialize;
 
-#[derive(Debug, ToJson)]
+#[derive(ToJson)]
 struct Person {
     id: i32,
     age: i32,
@@ -15,7 +16,10 @@ fn main() {
         name: String::from("neha"),
     };
 
-    println!("{:#?}", person);
+    // println!("{:#?}", person);
+
+    let json_pair = person.to_json();
+    println!("{}", json_pair);
 }
 
 // what we want

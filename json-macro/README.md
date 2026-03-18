@@ -1,5 +1,4 @@
-# generated AST for the Person struct
-
+# Generated AST for the Person struct
 
 ```
 DeriveInput {
