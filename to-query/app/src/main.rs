@@ -18,4 +18,12 @@ fn main() {
 
     println!("{}", search.to_query());
     // output : term= rust&page=2&per_page = 50
+
+    let search2 = Search {
+        term: "neha".into(),
+        page: 4,
+        per_page: Some(100),
+    };
+
+    println!("{}", search2.to_query());
 }
